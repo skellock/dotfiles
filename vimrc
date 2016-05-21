@@ -13,6 +13,7 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'sheerun/vim-polyglot'
 Plug 'terryma/vim-expand-region'
+Plug 'christoomey/vim-tmux-navigator'
 call plug#end()
 
 
@@ -22,6 +23,17 @@ let mapleader = "\<Space>"
 vmap v <Plug>(expand_region_expand)
 vmap <C-v> <Plug>(expand_region_shrink)
 
+" automatically jump to the end of pasted text: type ppppp
+vnoremap <silent> y y`]
+vnoremap <silent> p p`]
+nnoremap <silent> p p`]
+
+" backspace to the top, enter to the bottom
+nnoremap <CR> G
+nnoremap <BS> gg
+
+" select what we just pasted
+noremap gV `[v`]
 
 " ================ General Config ====================
 
@@ -104,3 +116,16 @@ set hlsearch        " Highlight searches by default
 set ignorecase      " Ignore case when searching...
 set smartcase       " ...unless we type a capital
 
+
+" ================ Prevent Paste Clobbering =========
+
+" vp doesn't replace paste buffer
+function! RestoreRegister()
+  let @" = s:restore_reg
+  return ''
+endfunction
+function! s:Repl()
+  let s:restore_reg = @"
+  return "p@=RestoreRegister()\<cr>"
+endfunction
+vmap <silent> <expr> p <sid>Repl()
