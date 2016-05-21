@@ -1,14 +1,43 @@
-snippet imp
+# --- Imports ---
+snippet imp "Import"
 import $1 from '$2'
 endsnippet
 
-snippet imp{
+snippet impd "Import with destructuring"
 import { $1 } from '$2'
+endsnippet
 
-snippet impr
+snippet impr "Import from React"
 import React, { Component, $1 } from 'react'
 endsnippet
 
-snippet imprn
+snippet imprn "Import from React Native"
 import { View, $1 } from 'react-native'
+endsnippet
+
+# --- Classes ---
+snippet class "Class"
+class ${1:Widget} {
+  $2
+}
+endsnippet
+
+snippet classsub "Subclass"
+class ${1:Widget} extends ${2:SomethingAwesome} {
+  $3
+}
+endsnippet
+
+# --- Comments ---
+snippet ** "Comment"
+/**
+ * ${1:This function probably has a bug.}
+ */
+endsnippet
+
+# --- Tests ---
+snippet ava "Ava Test"
+test('${1:In the criminal justice system}', (t) => {
+  ${2:t.true(true)}
+})
 endsnippet

@@ -139,6 +139,10 @@ let g:UltiSnipsJumpBackwardTrigger="<S-Tab>"
 let g:ycm_key_list_select_completion = ['<C-j>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<C-k>', '<Up>']
 
+" CtrlP
+nnoremap ,t :CtrlP<CR>
+nnoremap ,b :CtrlPBuffer<CR>
+
 " ================ General Config ====================
 
 set relativenumber              " relative line numbers
@@ -154,7 +158,7 @@ set visualbell                  " No sounds
 set hidden
 
 " Let the leader timeout faster
-set timeoutlen=100
+set timeoutlen=200
 
 colorscheme industry
 
