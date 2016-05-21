@@ -22,7 +22,7 @@ Plug 'skwp/vim-colors-solarized'
 Plug 'chriskempson/base16-vim'
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'SirVer/ultisnips'
-Plug 'junegunn/fzf.vim'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-eunuch'
 Plug 'hecal3/vim-leader-guide'
