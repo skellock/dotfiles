@@ -16,3 +16,5 @@ fi
 # custom prompt -- i like https://github.com/sindresorhus/pure
 autoload -U promptinit && promptinit
 prompt pure
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
