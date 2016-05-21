@@ -11,7 +11,7 @@ installDotFile() {
 }
 
 # install each of the dot files
-for f in gitconfig vimrc tmux.conf zshrc
+for f in gitconfig vimrc tmux.conf zshrc zalias
 do
   installDotFile $f
 done
