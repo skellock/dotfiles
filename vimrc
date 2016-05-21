@@ -128,9 +128,16 @@ endfunction
 
 nnoremap <silent> Q :call CloseWindowOrKillBuffer()<CR>
 
-let g:ycm_key_list_select_completion = ['\<C-TAB>', '\<Down>']
-let g:ycm_key_list_previous_completion = ['\<C-S-TAB>', '\<Up>']
-let g:SuperTabDefaultCompletionType = '\<C-Tab>'
+let g:SuperTabDefaultCompletionType = '<C-Tab>'
+
+" UltiSnips
+let g:UltiSnipsExpandTrigger="<Tab>"
+let g:UltiSnipsJumpForwardTrigger="<Tab>"
+let g:UltiSnipsJumpBackwardTrigger="<S-Tab>"
+
+" YouCompleteMe
+let g:ycm_key_list_select_completion = ['<C-j>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<C-k>', '<Up>']
 
 " ================ General Config ====================
 
@@ -247,20 +254,6 @@ vmap <silent> <expr> p <sid>Repl()
 
 " ============== UltiSnips ==========================
 let g:UltiSnipsSnippetsDirectory=['~/.vim/ultisnips/']
-
-" let g:UltiSnipsExpandTrigger="<F8>"
-
-" let g:UltiSnipsExpandTrigger = "<nop>"
-" let g:ulti_expand_or_jump_res = 0
-" function ExpandSnippetOrCarriageReturn()
-"   let snippet = UltiSnips#ExpandSnippetOrJump()
-"   if g:ulti_expand_or_jump_res > 0
-"     return snippet
-"   else
-"     return "\<CR>"
-"   endif
-" endfunction
-" inoremap <expr> <CR> pumvisible() ?  "<C-R>=ExpandSnippetOrCarriageReturn()<CR>" : "\<CR>"
 
 " ============== File Extension Mappings ============
 
