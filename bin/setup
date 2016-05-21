@@ -2,7 +2,15 @@
 
 set -e
 
-# git config
+# install a dot file in the home
+installDotFile() {
+  if [ ! -h $HOME/.$1 ]
+  then
+    ln -s $(PWD)/$1 $HOME/.$1
+  fi
+}
 
-ln -s $(PWD)/gitconfig $HOME/.gitconfig
+installDotFile gitconfig
+
+
 
