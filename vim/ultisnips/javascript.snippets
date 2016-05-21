@@ -1,4 +1,7 @@
+# ---------------
 # --- Imports ---
+# ---------------
+
 snippet imp "Import"
 import $1 from '$2'
 endsnippet
@@ -15,7 +18,29 @@ snippet imprn "Import from React Native"
 import { View, $1 } from 'react-native'
 endsnippet
 
+# ---------------------
+# --- If Statements ---
+# ---------------------
+
+snippet if "if"
+if (${1:true}) {
+  ${2:console.log('true!')}
+}
+endsnippet
+
+snippet ife "if/else"
+if (${1:true}) {
+  ${2:console.log(':)')}
+} else {
+  ${3:console.log(':(')}
+}
+endsnippet
+
+
+# ---------------
 # --- Classes ---
+# ---------------
+
 snippet class "Class"
 class ${1:Widget} {
   $2
@@ -28,16 +53,69 @@ class ${1:Widget} extends ${2:SomethingAwesome} {
 }
 endsnippet
 
+
+# ----------------
 # --- Comments ---
+# ----------------
+
 snippet ** "Comment"
 /**
  * ${1:This function probably has a bug.}
  */
 endsnippet
 
+
+# -------------
 # --- Tests ---
+# -------------
+
 snippet ava "Ava Test"
 test('${1:In the criminal justice system}', (t) => {
   ${2:t.true(true)}
 })
+endsnippet
+
+
+# -----------------
+# --- Variables ---
+# -----------------
+
+snippet cd "Const destructuring"
+const { ${1:one, two} } = ${2:thingWithProperties}
+endsnippet
+
+
+# ------------------------------
+# --- Function ES6 - 1 Liner ---
+# ------------------------------
+
+snippet fn1 "ES6 Function 1 Liner"
+const ${1:functionName} = (${2:parameters}) => ${3:true}
+endsnippet
+
+snippet fn1c "ES6 Function 1 Liner"
+/**
+ * ${1:Documentation?  Lol.}
+ */
+const ${2:functionName} = (${3:parameters}) => ${4:true}
+endsnippet
+
+
+# --------------------------------
+# --- Function ES6 - With Body ---
+# --------------------------------
+
+snippet fnb "ES6 Function With Body"
+const ${1:functionName} = (${2:parameters}) => {
+  ${3:return true}
+}
+endsnippet
+
+snippet fnbc "ES6 Function With Body + Comment"
+/**
+ * ${1:Documentation?  Lol.}
+ */
+const ${2:functionName} = (${3:parameters}) => {
+  ${4:return true}
+}
 endsnippet
