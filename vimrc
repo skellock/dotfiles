@@ -14,6 +14,7 @@ Plug 'tpope/vim-repeat'
 Plug 'sheerun/vim-polyglot'
 Plug 'terryma/vim-expand-region'
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'rking/ag.vim'
 call plug#end()
 
 
@@ -34,6 +35,9 @@ nnoremap <BS> gg
 
 " select what we just pasted
 noremap gV `[v`]
+
+" K searches the code base for a word
+nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 
 " ================ General Config ====================
 
@@ -116,6 +120,19 @@ set hlsearch        " Highlight searches by default
 set ignorecase      " Ignore case when searching...
 set smartcase       " ...unless we type a capital
 
+
+" ================ Ag > Grep ========================
+if executable('ag')
+  " Use ag over grep
+  set grepprg=ag\ --nogroup\ --nocolor
+
+  " Use ag in CtrlP for listing files. Lightning fast and respects
+  " .gitignore
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+
+  " ag is fast enough that CtrlP doesn't need to cache
+  let g:ctrlp_use_caching = 0
+endif
 
 " ================ Prevent Paste Clobbering =========
 
