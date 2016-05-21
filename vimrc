@@ -28,6 +28,8 @@ Plug 'tpope/vim-eunuch'
 Plug 'hecal3/vim-leader-guide'
 Plug 'tpope/vim-fugitive'
 Plug 'ctjhoa/spacevim'
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
+Plug 'ervandew/supertab'
 call plug#end()
 
 
@@ -125,6 +127,10 @@ function! CloseWindowOrKillBuffer()
 endfunction
 
 nnoremap <silent> Q :call CloseWindowOrKillBuffer()<CR>
+
+let g:ycm_key_list_select_completion = ['\<C-TAB>', '\<Down>']
+let g:ycm_key_list_previous_completion = ['\<C-S-TAB>', '\<Up>']
+let g:SuperTabDefaultCompletionType = '\<C-Tab>'
 
 " ================ General Config ====================
 
@@ -239,9 +245,22 @@ endfunction
 vmap <silent> <expr> p <sid>Repl()
 
 
-" ============== File Extension Mappings ============
+" ============== UltiSnips ==========================
 let g:UltiSnipsSnippetsDirectory=['~/.vim/ultisnips/']
 
+" let g:UltiSnipsExpandTrigger="<F8>"
+
+" let g:UltiSnipsExpandTrigger = "<nop>"
+" let g:ulti_expand_or_jump_res = 0
+" function ExpandSnippetOrCarriageReturn()
+"   let snippet = UltiSnips#ExpandSnippetOrJump()
+"   if g:ulti_expand_or_jump_res > 0
+"     return snippet
+"   else
+"     return "\<CR>"
+"   endif
+" endfunction
+" inoremap <expr> <CR> pumvisible() ?  "<C-R>=ExpandSnippetOrCarriageReturn()<CR>" : "\<CR>"
 
 " ============== File Extension Mappings ============
 
