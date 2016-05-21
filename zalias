@@ -1,7 +1,33 @@
 #!/usr/bin/env zsh
 
+# unixy
 alias ll='ls -la'
+alias -g ...='../..'
+alias -g ....='../../..'
+alias -g .....='../../../..'
+
+# shortcuts to editing
 alias vimrc='vim ~/.vimrc'
 alias zshrc='vim ~/.zshrc'
+alias zalias='vim ~/.zalias'
 
+# git
 alias gs='git status'
+alias gd='git diff'
+alias ga='git add -A'
+alias gp='git push'
+alias gpl='git pull'
+alias gplr='git pull --rebase'
+alias gst='git stash'
+alias gsp='git stash pop'
+alias gco='git co'
+alias guns='git unstage'
+alias gr='git rebase'
+alias gbcl="git branch --merged master | grep -v 'master$' | xargs git branch -d"
+alias gc='git commit'
+
+# react native
+alias rna='react-native run-android'
+alias rni='react-native run-ios'
+alias rns='react-native start'
+
