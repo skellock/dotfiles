@@ -18,8 +18,14 @@ set autoread                    "Reload files changed outside vim
 " http://items.sjbach.com/319/configuring-vim-right
 set hidden
 
-"turn on syntax highlighting
-syntax on
+if has('autocmd')
+  filetype plugin indent on
+endif
+
+" syntax highlighting
+if has('syntax') && !exists('g:syntax_on')
+  syntax enable
+endif
 
 " Use space as the leader
 let mapleader = "\<Space>"
@@ -53,9 +59,6 @@ set expandtab
 " Auto indent pasted text
 nnoremap p p=`]<C-o>
 nnoremap P P=`]<C-o>
-
-filetype plugin on
-filetype indent on
 
 " Display tabs and trailing spaces visually
 set list listchars=tab:\ \ ,trail:·
@@ -95,4 +98,8 @@ set ignorecase      " Ignore case when searching...
 set smartcase       " ...unless we type a capital
 
 
+" ================ Plugins ==========================
+call plug#begin('~/.vim/plugged')
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+call plug#end()
 
