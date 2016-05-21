@@ -17,4 +17,10 @@ fi
 autoload -U promptinit && promptinit
 prompt pure
 
+# Fuzzy File Finder
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Key binds
+bindkey -v
+bindkey '^a' beginning-of-line
+bindkey '^e' end-of-line
