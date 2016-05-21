@@ -15,6 +15,19 @@ Plug 'sheerun/vim-polyglot'
 Plug 'terryma/vim-expand-region'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'rking/ag.vim'
+Plug 'Lokaltog/vim-easymotion'
+Plug 'scrooloose/syntastic'
+Plug 'mxw/vim-jsx'
+Plug 'skwp/vim-colors-solarized'
+Plug 'chriskempson/base16-vim'
+Plug 'AndrewRadev/splitjoin.vim'
+Plug 'SirVer/ultisnips'
+Plug 'junegunn/fzf.vim'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-eunuch'
+Plug 'hecal3/vim-leader-guide'
+Plug 'tpope/vim-fugitive'
+Plug 'ctjhoa/spacevim'
 call plug#end()
 
 
@@ -52,6 +65,9 @@ set visualbell                  " No sounds
 " exist in the background without being in a window.
 " http://items.sjbach.com/319/configuring-vim-right
 set hidden
+
+" Let the leader timeout faster
+set timeoutlen=100
 
 
 " ================ Swap Files =======================
