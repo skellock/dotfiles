@@ -187,8 +187,36 @@ endsnippet
 # --- React JSX ---
 # -----------------
 
-snippet <v "<View>"
-<View style={${1:Styles.viewStyleName}}>
+snippet co "Component - Open"
+<${1:View}>
   ${2}
-</View>
+</${1/(\w+).*/$1/}>
 endsnippet
+
+snippet co1 "Component - Open - 1 Line"
+<${1:Text}>${2}</${1/(\w+).*/$1/}>
+endsnippet
+
+snippet coa "Component - Open + Attributes"
+<${1:View}
+  ${2}
+  >
+  ${3}
+</${1/(\w+).*/$1/}>
+endsnippet
+
+snippet cc "Component - Closed"
+<${1:View} />
+endsnippet
+
+snippet cas "Component Attribute - String"
+${1:key}='${2:stuff}'
+endsnippet
+
+snippet caj "Component Attribute - JavaScript"
+${1:style}={${2:Styles.container}}
+endsnippet
+
+
+
+
