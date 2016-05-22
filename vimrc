@@ -39,6 +39,9 @@ let mapleader = "\<Space>"
 vmap v <Plug>(expand_region_expand)
 vmap <C-v> <Plug>(expand_region_shrink)
 
+" searching related
+nnoremap // :nohlsearch<CR>
+
 " automatically jump to the end of pasted text: type ppppp
 vnoremap <silent> y y`]
 vnoremap <silent> p p`]
@@ -146,6 +149,7 @@ nnoremap ,b :CtrlPBuffer<CR>
 " ================ General Config ====================
 
 set relativenumber              " relative line numbers
+set number
 set backspace=indent,eol,start  " Allow backspace in insert mode
 set showcmd                     " Show incomplete cmds down the bottom
 set showmode                    " Show current mode down the bottom
