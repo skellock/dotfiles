@@ -85,6 +85,33 @@ const { ${1:one, two} } = ${2:thingWithProperties}
 endsnippet
 
 
+# ------------------------
+# --- Function Binding ---
+# ------------------------
+
+snippet fbt "Function Bind This"
+this.${1:fn} = this.$1.bind(this)
+endsnippet
+
+
+# -------------------
+# --- Constructor ---
+# -------------------
+
+snippet ctor "Class Constructor - Empty"
+constructor () {
+  ${1}
+}
+endsnippet
+
+snippet ctorp "Class Constructor - Empty"
+constructor (props) {
+  super(props)
+  ${1}
+}
+endsnippet
+
+
 # ------------------------------
 # --- Function ES6 - 1 Liner ---
 # ------------------------------
@@ -119,3 +146,28 @@ const ${2:functionName} = (${3:parameters}) => {
   ${4:return true}
 }
 endsnippet
+
+
+# -------------------
+# --- React Stuff ---
+# -------------------
+
+snippet render "Empty render method"
+render () {
+  return (
+    ${1}
+  )
+}
+endsnippet
+
+
+# -----------------
+# --- React JSX ---
+# -----------------
+
+snippet <v "<View>"
+<View style={${1:Styles.viewStyleName}}>
+  ${2}
+</View>
+endsnippet
+
