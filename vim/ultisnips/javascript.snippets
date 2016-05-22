@@ -18,6 +18,28 @@ snippet imprn "Import from React Native"
 import { View, $1 } from 'react-native'
 endsnippet
 
+
+# -----------------------
+# --- Export Defaults ---
+# -----------------------
+
+snippet ed "export default"
+export default ${1}
+endsnippet
+
+snippet edf "export default - function"
+export default (${1}) => {
+  ${2:return true}
+}
+endsnippet
+
+snippet edo "export default - object"
+export default {
+  ${1}
+}
+endsnippet
+
+
 # ---------------------
 # --- If Statements ---
 # ---------------------
@@ -170,4 +192,3 @@ snippet <v "<View>"
   ${2}
 </View>
 endsnippet
-
