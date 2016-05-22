@@ -146,6 +146,21 @@ let g:ycm_key_list_previous_completion = ['<C-k>', '<Up>']
 nnoremap ,t :CtrlP<CR>
 nnoremap ,b :CtrlPBuffer<CR>
 
+" NERDTree
+nnoremap <leader>n :NERDTreeToggle<CR>
+
+" StripTrailingWhitespaces
+function! <SID>StripTrailingWhitespaces()
+  let _s=@/
+  let l = line(".")
+  let c = col(".")
+  %s/\s\+$//e
+  let @/=_s
+  call cursor(l, c)
+endfunction
+command! StripTrailingWhitespaces call <SID>StripTrailingWhitespaces()
+nmap ,w :StripTrailingWhitespaces<CR>
+
 " ================ General Config ====================
 
 set relativenumber              " relative line numbers
