@@ -169,6 +169,8 @@ set showcmd                     " Show incomplete cmds down the bottom
 set showmode                    " Show current mode down the bottom
 set gcr=a:blinkon0              " Disable cursor blink
 set visualbell                  " No sounds
+set pastetoggle=<F2>
+set mouse=a
 
 " This makes vim act like all other editors, buffers can
 " exist in the background without being in a window.
