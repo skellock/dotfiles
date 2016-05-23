@@ -27,9 +27,9 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-eunuch'
 Plug 'hecal3/vim-leader-guide'
 Plug 'tpope/vim-fugitive'
-Plug 'ctjhoa/spacevim'
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 Plug 'ervandew/supertab'
+Plug 'ctjhoa/spacevim'
 call plug#end()
 
 
@@ -47,10 +47,6 @@ vnoremap <silent> y y`]
 vnoremap <silent> p p`]
 nnoremap <silent> p p`]
 
-" backspace to the top, enter to the bottom
-nnoremap <CR> G
-nnoremap <BS> gg
-
 " select what we just pasted
 noremap gV `[v`]
 
@@ -65,7 +61,8 @@ function! OpenNerdTree()
     NERDTreeToggle
   endif
 endfunction
-nnoremap <silent> <C-\> :call OpenNerdTree()<CR>
+nnoremap <Leader>\| :call OpenNerdTree()<CR>
+nnoremap <leader>fn :NERDTreeToggle<CR>
 
 " ,q to toggle quickfix window (where you have stuff like Ag)
 " ,oq to open it back up (rare)
@@ -130,7 +127,6 @@ function! CloseWindowOrKillBuffer()
 endfunction
 
 nnoremap <silent> Q :call CloseWindowOrKillBuffer()<CR>
-
 let g:SuperTabDefaultCompletionType = '<C-Tab>'
 
 " UltiSnips
@@ -143,11 +139,11 @@ let g:ycm_key_list_select_completion = ['<C-j>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<C-k>', '<Up>']
 
 " CtrlP
-nnoremap ,t :CtrlP<CR>
-nnoremap ,b :CtrlPBuffer<CR>
+nnoremap <Leader>o :CtrlP<CR>
+nnoremap <Leader>b :CtrlPBuffer<CR>
 
 " NERDTree
-nnoremap <leader>n :NERDTreeToggle<CR>
+nnoremap <leader>\ :NERDTreeToggle<CR>
 
 " StripTrailingWhitespaces
 function! <SID>StripTrailingWhitespaces()
@@ -160,6 +156,10 @@ function! <SID>StripTrailingWhitespaces()
 endfunction
 command! StripTrailingWhitespaces call <SID>StripTrailingWhitespaces()
 nmap ,w :StripTrailingWhitespaces<CR>
+
+" EasyMotion
+map <leader>ew <Plug>(easymotion-w)
+map <leader>eb <Plug>(easymotion-b)
 
 " ================ General Config ====================
 
@@ -281,3 +281,19 @@ let g:UltiSnipsSnippetsDirectory=['~/.vim/ultisnips/']
 " ============== File Extension Mappings ============
 
 autocmd BufRead,BufNewFile *.es6 setfiletype javascript
+
+" JSX
+
+let g:jsx_ext_required = 0
+
+" ============== Syntastic ==========================
+
+let g:syntastic_enable_signs=1
+let g:syntastic_auto_jump=0
+let g:syntastic_quiet_messages = {}
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_javascript_standard_generic = 1
+let g:syntastic_javascript_checkers = ['standard']
