@@ -31,6 +31,7 @@ Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 Plug 'ervandew/supertab'
 Plug 'ctjhoa/spacevim'
 Plug 'itchyny/lightline.vim'
+Plug 'skwp/YankRing.vim'
 call plug#end()
 
 
@@ -338,3 +339,6 @@ endfunction
 
 " Use status bar even with single buffer
 set laststatus=2
+
+" ============== YankRing ===========================
+let g:yankring_history_file = '.yankring-history'
