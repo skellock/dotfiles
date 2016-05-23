@@ -30,6 +30,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 Plug 'ervandew/supertab'
 Plug 'ctjhoa/spacevim'
+Plug 'itchyny/lightline.vim'
 call plug#end()
 
 
@@ -53,7 +54,6 @@ noremap gV `[v`]
 " K searches the code base for a word
 nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 
-" C-\ to open NerdTree
 function! OpenNerdTree()
   if &modifiable && strlen(expand('%')) > 0 && !&diff
     NERDTreeFind
@@ -61,8 +61,6 @@ function! OpenNerdTree()
     NERDTreeToggle
   endif
 endfunction
-nnoremap <Leader>\| :call OpenNerdTree()<CR>
-nnoremap <leader>fn :NERDTreeToggle<CR>
 
 " ,q to toggle quickfix window (where you have stuff like Ag)
 " ,oq to open it back up (rare)
@@ -138,12 +136,12 @@ let g:UltiSnipsJumpBackwardTrigger="<S-Tab>"
 let g:ycm_key_list_select_completion = ['<C-j>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<C-k>', '<Up>']
 
-" CtrlP
+" File operations
+nnoremap <Leader>s :w<CR>
 nnoremap <Leader>o :CtrlP<CR>
 nnoremap <Leader>b :CtrlPBuffer<CR>
-
-" NERDTree
 nnoremap <leader>\ :NERDTreeToggle<CR>
+nnoremap <Leader>\| :call OpenNerdTree()<CR>
 
 " StripTrailingWhitespaces
 function! <SID>StripTrailingWhitespaces()
@@ -177,9 +175,9 @@ set visualbell                  " No sounds
 set hidden
 
 " Let the leader timeout faster
-set timeoutlen=200
+set timeoutlen=250
 
-colorscheme industry
+colorscheme slate
 
 " ================ Swap Files =======================
 
@@ -297,3 +295,46 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_javascript_standard_generic = 1
 let g:syntastic_javascript_checkers = ['standard']
+
+" ============== Lightline ==========================
+
+let g:lightline = {
+      \ 'colorscheme': 'solarized',
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'fugitive', 'readonly', 'filename', 'modified' ] ]
+      \ },
+      \ 'component_function': {
+      \   'fugitive': 'MyFugitive',
+      \   'readonly': 'MyReadonly',
+      \   'filename': 'MyFilename',
+      \ },
+      \ 'separator': { 'left': '⮀', 'right': '⮂' },
+      \ 'subseparator': { 'left': '⮁', 'right': '⮃' }
+      \ }
+
+function! MyReadonly()
+  if &filetype == "help"
+    return ""
+  elseif &readonly
+    return "⭤ "
+  else
+    return ""
+  endif
+endfunction
+
+function! MyFugitive()
+  if exists("*fugitive#head")
+    let _ = fugitive#head()
+    return strlen(_) ? '⭠ '._ : ''
+  endif
+  return ''
+endfunction
+
+function! MyFilename()
+  return ('' != MyReadonly() ? MyReadonly() . ' ' : '') .
+       \ ('' != expand('%') ? expand('%') : '[NoName]')
+endfunction
+
+" Use status bar even with single buffer
+set laststatus=2
