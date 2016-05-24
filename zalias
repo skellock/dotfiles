@@ -20,11 +20,12 @@ alias gpl='git pull'
 alias gplr='git pull --rebase'
 alias gst='git stash'
 alias gsp='git stash pop'
-alias gco='git checkout .'
+alias gco='git checkout'
 alias guns='git unstage'
 alias gr='git rebase'
 alias gbcl="git branch --merged master | grep -v 'master$' | xargs git branch -d"
 alias gc='git commit'
+alias gbl='git branch --list'
 
 # react native
 alias rna='react-native run-android'
