@@ -160,6 +160,10 @@ nmap ,w :StripTrailingWhitespaces<CR>
 map <leader>ew <Plug>(easymotion-w)
 map <leader>eb <Plug>(easymotion-b)
 
+" CtrlP
+" don't allow ctrl-p to change working directory automatically
+let g:ctrlp_working_path_mode = 0
+
 " ================ General Config ====================
 
 set relativenumber              " relative line numbers
