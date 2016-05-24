@@ -27,7 +27,7 @@ alias gco='git checkout'
 alias guns='git unstage'
 alias gr='git rebase'
 alias gbcl="git branch --merged master | grep -v 'master$' | xargs git branch -d"
-alias gc='git commit'
+alias gc='git commit --verbose'
 alias gbl='git branch --list'
 alias gbc='git checkout -b'
 alias gbd='git branch -d'
@@ -36,4 +36,3 @@ alias gbd='git branch -d'
 alias rna='react-native run-android'
 alias rni='react-native run-ios'
 alias rns='react-native start'
-
