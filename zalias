@@ -11,6 +11,9 @@ alias vimrc='vim ~/.vimrc'
 alias zshrc='vim ~/.zshrc'
 alias zalias='vim ~/.zalias'
 
+# reloading
+alias zaliasr='source ~/.zalias'
+
 # git
 alias gs='git status'
 alias gd='git diff'
@@ -26,6 +29,8 @@ alias gr='git rebase'
 alias gbcl="git branch --merged master | grep -v 'master$' | xargs git branch -d"
 alias gc='git commit'
 alias gbl='git branch --list'
+alias gbc='git checkout -b'
+alias gbd='git branch -d'
 
 # react native
 alias rna='react-native run-android'
