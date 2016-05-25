@@ -348,3 +348,6 @@ set laststatus=2
 
 " ============== YankRing ===========================
 let g:yankring_history_file = '.yankring-history'
+
+" === NERDTree 
+let g:NERDTreeWinSize=65
