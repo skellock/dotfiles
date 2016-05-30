@@ -1,0 +1,9 @@
+zstyle ':prezto:load' pmodule \
+  'directory' \
+  'utility' \
+  'completion' \
+  'git' \
+  'prompt' \
+  'syntax-highlighting' \
+  'history-substring-search' \
+

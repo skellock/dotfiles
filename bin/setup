@@ -19,7 +19,7 @@ installDotFolder() {
 }
 
 # install each of the dot files
-for f in gitconfig gitignore vimrc tmux.conf zshrc zalias
+for f in gitconfig gitignore vimrc tmux.conf zshrc zalias zpreztorc
 do
   installDotFile $f
 done

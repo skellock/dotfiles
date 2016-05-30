@@ -1,3 +1,8 @@
+# Source Prezto.
+if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+fi
+
 # environment variables
 export EDITOR=vim
 export LANG="en_US.UTF-8"
