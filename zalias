@@ -1,7 +1,7 @@
 #!/usr/bin/env zsh
 
 # unixy
-alias ll='ls -la'
+# alias ll='ls -la'
 alias -g ...='../..'
 alias -g ....='../../..'
 alias -g .....='../../../..'
