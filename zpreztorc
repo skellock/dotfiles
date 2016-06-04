@@ -6,8 +6,10 @@ zstyle ':prezto:load' pmodule \
   'completion' \
   'syntax-highlighting' \
   'history-substring-search' \
+  'git' \
   'prompt' \
 
+zstyle ':prezto:*:*' color 'yes'
 zstyle ':prezto:module:syntax-highlighting' color 'yes'
 zstyle ':prezto:module:utility:ls' color 'yes'
 
