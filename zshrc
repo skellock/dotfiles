@@ -4,7 +4,9 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # environment variables
-export EDITOR=vim
+export EDITOR='vim'
+export PAGER='less'
+export VISUAL='vim'
 export LANG="en_US.UTF-8"
 
 # path
