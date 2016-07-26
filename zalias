@@ -1,7 +1,7 @@
 #!/usr/bin/env zsh
 
 # unixy
-# alias ll='ls -la'
+alias ll='ls -lah'
 alias -g ...='../..'
 alias -g ....='../../..'
 alias -g .....='../../../..'
@@ -21,3 +21,4 @@ alias gbcl="git branch --merged master | grep -v 'master$' | xargs git branch -d
 alias rna='react-native run-android'
 alias rni='react-native run-ios'
 alias rns='react-native start'
+alias shake='npm run android:shake'
