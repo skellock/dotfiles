@@ -12,9 +12,11 @@
 
 [color "diff"]
   meta = yellow bold
+  commit = green bold
   frag = magenta bold
-  old = red
-  new = green
+  old = red bold
+  new = green bold
+  whitespace = red reverse
 
 [format]
   pretty = format:%C(blue)%ad%Creset %C(yellow)%h%C(green)%d%Creset %C(blue)%s %C(magenta) [%an]%Creset
@@ -22,3 +24,11 @@
 [core]
   editor = vim
   excludesfile = ~/.gitignore
+  pager = diff-highlight | diff-so-fancy | less -r
+
+[color "diff-highlight"]
+	oldNormal = red bold
+  oldHighlight = red bold 52
+  newNormal = green bold
+  newHighlight = "green bold 22"
+
