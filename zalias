@@ -16,6 +16,7 @@ alias zaliasr='source ~/.zalias'
 
 # git
 alias gbcl="git branch --merged master | grep -v 'master$' | xargs git branch -d"
+alias gpoh="git push -u origin HEAD"
 
 # react native
 alias rna='react-native run-android'
