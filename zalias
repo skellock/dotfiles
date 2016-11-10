@@ -23,3 +23,12 @@ alias rna='react-native run-android'
 alias rni='react-native run-ios'
 alias rns='react-native start'
 alias shake='npm run android:shake'
+
+# yarn
+alias y='yarn'
+alias ya='yarn add'
+alias yga='yarn global add'
+alias yr='yarn run'
+alias ys='yarn start'
+alias yout='yarn outdated'
+
