@@ -1,0 +1,8 @@
+#!/bin/bash
+
+#set -e
+
+cp -f ./vscode/keybindings.json ~/Library/Application\ Support/Code/User/
+cp -f ./vscode/settings.json ~/Library/Application\ Support/Code/User/
+cp -f -R ./vscode/snippets ~/Library/Application\ Support/Code/User/
+
