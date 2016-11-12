@@ -1,11 +1,13 @@
 // Place your settings in this file to overwrite the default settings
 {
   "editor.fontFamily": "'Fira Code', Menlo, Monaco, 'Courier New', monospace",
-  "editor.fontSize": 13,
+  "editor.fontSize": 12,
   "editor.lineNumbers": "relative",
   "editor.fontLigatures": true,
-  "editor.renderWhitespace": "all",
+  "editor.renderWhitespace": "boundary",
+  "editor.tabSize": 2,
 
+  "files.trimTrailingWhitespace": false,
   "files.exclude": {
     "**/.git": true,
     "**/.svn": true,
@@ -13,15 +15,23 @@
     "**/.DS_Store": true,
     "**/node_modules": true,
     "**/ios/build": true,
-    "**/release": true
+    "**/release": true,
+    "**/.nyc_output": true,
+    "**/dist": true,
+    "**/lerna-debug.log": true
   },
-  
+
   "standard.enable": true,
+  "standard.autoFixOnSave": true,
   "standard.options": {
     "parser": "babel-eslint"
   },
 
+  "json.format.enable": false,
+  
   "javascript.validate.enable": false,
   "telemetry.enableTelemetry": false,
-  "telemetry.enableCrashReporter": false
+  "telemetry.enableCrashReporter": false,
+  "workbench.statusBar.visible": true,
+  "window.zoomLevel": 0
 }
