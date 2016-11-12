@@ -31,4 +31,8 @@ alias yga='yarn global add'
 alias yr='yarn run'
 alias ys='yarn start'
 alias yout='yarn outdated'
+alias yt='yarn test'
+alias yrb='yarn run build'
+alias yrl='yarn run lint'
+alias yrw='yarn run watch'
 
