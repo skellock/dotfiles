@@ -112,7 +112,7 @@ vmap ,{ c{<C-R>"}<ESC>
 function! CloseWindowOrKillBuffer()
   let number_of_windows_to_this_buffer = len(filter(range(1, winnr('$')), "winbufnr(v:val) == bufnr('%')"))
 
-  " We should never bdelete a nerd tree
+  " We should never delete a nerd tree
   if matchstr(expand("%"), 'NERD') == 'NERD'
     wincmd c
     return
