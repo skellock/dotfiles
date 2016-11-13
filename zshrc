@@ -4,9 +4,10 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # environment variables
-export EDITOR='vim'
+export EDITOR='nvim'
+export VISUAL="$EDITOR"
+export GIT_EDITOR="$EDITOR"
 export PAGER='less'
-export VISUAL='vim'
 export LANG="en_US.UTF-8"
 export ANDROID_HOME='/Users/steve/Library/Android/sdk'
 
