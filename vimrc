@@ -27,13 +27,14 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-eunuch'
 Plug 'hecal3/vim-leader-guide'
 Plug 'tpope/vim-fugitive'
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
+" Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 Plug 'ervandew/supertab'
 Plug 'ctjhoa/spacevim'
 Plug 'itchyny/lightline.vim'
 Plug 'skwp/YankRing.vim'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePLugins' }
+Plug 'flazz/vim-colorschemes'
 call plug#end()
-
 
 " ================ Key Binding =======================
 
@@ -184,7 +185,9 @@ set hidden
 " Let the leader timeout faster
 set timeoutlen=250
 
-colorscheme slate
+let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+set termguicolors
+colorscheme janah
 
 " ================ Swap Files =======================
 
@@ -224,6 +227,8 @@ set linebreak    "Wrap lines at convenient points
 
 
 " ================ Completion =======================
+
+let g:deoplete#enable_at_startup = 1
 
 set wildmode=list:longest
 set wildmenu                "enable ctrl-n and ctrl-p to scroll thru matches
@@ -351,3 +356,8 @@ let g:yankring_history_file = '.yankring-history'
 
 " === NERDTree 
 let g:NERDTreeWinSize=65
+
+" ===== Git commit colors
+au FileType gitcommit
+ \ hi gitcommitSummary ctermfg=yellow ctermbg=red
+
