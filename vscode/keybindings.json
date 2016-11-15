@@ -5,9 +5,9 @@
   //   "command": "extension.vim_ctrl+d",
   //   "when": "editorTextFocus"
   // }
-  {
-    "key": "ctrl+j",
-    "command": "extension.jumpy-word",
-    "when": "editorTextFocus"
-  }
+  // {
+  //   "key": "ctrl+j",
+  //   "command": "extension.jumpy-word",
+  //   "when": "editorTextFocus"
+  // }
 ]
