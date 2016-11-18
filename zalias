@@ -20,7 +20,10 @@ alias gpoh="git push -u origin HEAD"
 
 # react native
 alias rna='react-native run-android'
-alias rni='react-native run-ios'
+alias rni='reattach-to-user-namespace react-native run-ios'
+alias rnise='reattach-to-user-namespace react-native run-ios --simulator "iPhone SE"'
+alias rni7='reattach-to-user-namespace react-native run-ios --simulator "iPhone 7"'
+alias rni7p='reattach-to-user-namespace react-native run-ios --simulator "iPhone 7 Plus"'
 alias rns='react-native start'
 alias shake='npm run android:shake'
 
@@ -35,4 +38,5 @@ alias yt='yarn test'
 alias yrb='yarn run build'
 alias yrl='yarn run lint'
 alias yrw='yarn run watch'
+alias yu='yarn upgrade'
 
