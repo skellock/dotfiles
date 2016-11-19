@@ -6,6 +6,8 @@
   "editor.fontLigatures": true,
   "editor.renderWhitespace": "boundary",
   "editor.tabSize": 2,
+  "editor.wordBasedSuggestions": false,
+  "editor.snippetSuggestions": "inline",
 
   "files.trimTrailingWhitespace": false,
   "files.exclude": {
@@ -38,5 +40,6 @@
   "telemetry.enableTelemetry": false,
   "telemetry.enableCrashReporter": false,
   "workbench.statusBar.visible": true,
-  "window.zoomLevel": 0
+  "window.zoomLevel": 0,
+  "blankLine.showMessage": false
 }

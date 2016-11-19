@@ -13,25 +13,19 @@
 		"description": "Log output to console"
 	}
 */
-	"Import class": {
-		"prefix": "impb",
-		"body": [
-			"import ${class:Something} from '${file:some-file}'"
-		],
+	"Import": {
+		"prefix": "imp",
+		"body": "import $1 from '$2'$0",
 		"description": "An import statement."
 	},
-	"Import class 2": {
+	"Import Named": {
 		"prefix": "impn",
-		"body": [
-			"import \\{ ${SomeClass} \\} from '${file:some-file}'"
-		],
+		"body": "import { $1 } from '$2'$0",
 		"description": "A named import statement."
 	},
 	"Console Tron Log": {
-		"prefix": "ctl",
-		"body": [
-			"console.tron.log(${log:Log Here})"
-		],
+		"prefix": "ctls",
+		"body": "console.tron.log('$1')$0",
 		"description": "console.tron.log"
 	}
 }
