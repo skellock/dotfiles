@@ -37,3 +37,4 @@ bindkey '^e' end-of-line
 # chruby
 source /usr/local/share/chruby/chruby.sh
 chruby 2.3.1
+export PATH="/usr/local/sbin:$PATH"
