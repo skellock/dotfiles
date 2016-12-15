@@ -361,3 +361,6 @@ let g:NERDTreeWinSize=65
 au FileType gitcommit
  \ hi gitcommitSummary ctermfg=yellow ctermbg=red
 
+
+set clipboard=unnamed
+
