@@ -38,3 +38,7 @@ bindkey '^e' end-of-line
 source /usr/local/share/chruby/chruby.sh
 chruby 2.3.1
 export PATH="/usr/local/sbin:$PATH"
+
+# rust
+source $HOME/.cargo/env
+
