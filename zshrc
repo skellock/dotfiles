@@ -42,3 +42,6 @@ export PATH="/usr/local/sbin:$PATH"
 # rust
 source $HOME/.cargo/env
 
+# z
+source $HOME/dotfiles/bin/z.sh
+
