@@ -2,9 +2,12 @@
 
 # unixy
 alias ll='ls -lah'
+
+# directories
 alias -g ...='../..'
 alias -g ....='../../..'
 alias -g .....='../../../..'
+alias sb='cd ~/src/sandbox && ll'
 
 # shortcuts to editing
 alias vimrc='vim ~/.vimrc'
@@ -20,17 +23,16 @@ alias gpoh="git push -u origin HEAD"
 
 # react native
 alias rna='react-native run-android'
-alias rni='reattach-to-user-namespace react-native run-ios'
-alias rnise='reattach-to-user-namespace react-native run-ios --simulator "iPhone SE"'
-alias rni7='reattach-to-user-namespace react-native run-ios --simulator "iPhone 7"'
-alias rni7p='reattach-to-user-namespace react-native run-ios --simulator "iPhone 7 Plus"'
-alias rns='react-native start'
-alias shake='npm run android:shake'
+alias rni='react-native run-ios'
+alias rnise='react-native run-ios --simulator "iPhone SE"'
+alias rni7='react-native run-ios --simulator "iPhone 7"'
+alias rni7p='react-native run-ios --simulator "iPhone 7 Plus"'
 
 # yarn
 alias y='yarn'
 alias ya='yarn add'
-alias yga='yarn global add'
+alias yad='yarn --dev add'
+alias yag='yarn global add'
 alias yr='yarn run'
 alias ys='yarn start'
 alias yout='yarn outdated'
@@ -39,4 +41,16 @@ alias yrb='yarn run build'
 alias yrl='yarn run lint'
 alias yrw='yarn run watch'
 alias yu='yarn upgrade'
+alias yui='yarn upgrade-interactive'
 
+# npm
+alias na='npm --save install'
+alias nad='npm --save-dev install'
+alias nag='npm --global install'
+alias nr='npm run'
+alias ns='npm start'
+alias nout='npm outdated'
+alias nt='npm test'
+alias nrb='npm run build'
+alias nrl='npm run lint'
+alias nrw='npm run watch'
