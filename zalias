@@ -1,5 +1,8 @@
 #!/usr/bin/env zsh
 
+# also includes oh-my-zsh/git aliases found here
+# https://github.com/robbyrussell/oh-my-zsh/wiki/Plugin:git
+
 # unixy
 alias ll='ls -lah'
 
@@ -54,3 +57,8 @@ alias nt='npm test'
 alias nrb='npm run build'
 alias nrl='npm run lint'
 alias nrw='npm run watch'
+
+
+# http
+alias https='http --default-scheme https'
+

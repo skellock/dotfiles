@@ -1,8 +1,3 @@
-# Source Prezto.
-if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
-  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
-fi
-
 # environment variables
 export EDITOR='nvim'
 export VISUAL="$EDITOR"
@@ -14,6 +9,14 @@ export ANDROID_HOME='/Users/steve/Library/Android/sdk'
 # path
 export PATH="/Users/steve/bin:$PATH:$ANDROID_HOME/platform-tools"
 
+# install antigen
+source $HOME/dotfiles/antigen.zsh
+antigen use oh-my-zsh
+antigen bundle git
+antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle mafredri/zsh-async
+antigen bundle sindresorhus/pure
+
 # hookup the aliases
 source ~/.zalias
 
@@ -21,13 +24,6 @@ source ~/.zalias
 if [ -e ~/.secrets ]; then
   source ~/.secrets
 fi
-
-# custom prompt -- i like https://github.com/sindresorhus/pure
-autoload -U promptinit && promptinit
-prompt pure
-
-# Fuzzy File Finder
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Key binds
 bindkey -v
@@ -44,4 +40,7 @@ source $HOME/.cargo/env
 
 # z
 source $HOME/dotfiles/bin/z.sh
+
+# tell antigen we are done
+antigen apply
 
