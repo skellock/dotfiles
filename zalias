@@ -34,7 +34,7 @@ alias rni7p='react-native run-ios --simulator "iPhone 7 Plus"'
 # yarn
 alias y='yarn'
 alias ya='yarn add'
-alias yad='yarn --dev add'
+alias yad='yarn add -D'
 alias yag='yarn global add'
 alias yr='yarn run'
 alias ys='yarn start'
@@ -47,6 +47,7 @@ alias yu='yarn upgrade'
 alias yui='yarn upgrade-interactive'
 
 # npm
+alias ni='npm install'
 alias na='npm --save install'
 alias nad='npm --save-dev install'
 alias nag='npm --global install'
