@@ -44,3 +44,5 @@ source $HOME/dotfiles/bin/z.sh
 # tell antigen we are done
 antigen apply
 
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
