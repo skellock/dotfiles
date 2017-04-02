@@ -1,0 +1,54 @@
+" You can enable the existing layers in space-vim and
+" exclude the partial plugins in a certain layer.
+" The command Layer is vaild in the function Layers().
+" Use exclude option if you don't want the full Layer,
+" e.g., Layer 'better-defaults', { 'exclude': 'itchyny/vim-cursorword' }
+function! Layers()
+
+    " Default layers, recommended!
+    Layer 'fzf'
+    Layer 'unite'
+    Layer 'better-defaults'
+    Layer 'ycmd'
+    Layer 'programming'
+    Layer 'javascript'
+    Layer 'syntax-checking'
+    Layer 'emoji'
+
+endfunction
+
+" Put your private plugins here.
+function! UserInit()
+
+    " Space has been set as the default leader key,
+    " if you want to change it, uncomment and set it here.
+    " let g:spacevim_leader = "<\Space>"
+    " let g:spacevim_localleader = ','
+
+    " Install private plugins
+    Plug 'liuchengxu/space-vim-dark'
+
+endfunction
+
+function! UserConfig()
+
+    " theme
+    set termguicolors
+    color space-vim-dark
+
+    " indentation
+    set autoindent
+    set smartindent
+    set smarttab
+    set shiftwidth=2
+    set softtabstop=2
+    set tabstop=2
+    set expandtab
+
+    " syntax
+    let g:ale_linters = {
+      \   'javascript': ['standard'],
+      \}
+
+endfunction
+
