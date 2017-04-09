@@ -27,6 +27,9 @@ function! UserInit()
 
     " Install private plugins
     Plug 'liuchengxu/space-vim-dark'
+    Plug 'sbdchd/neoformat'
+
+    let g:neoformat_enabled_javascript = ['prettier']
 
 endfunction
 
