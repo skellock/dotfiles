@@ -4,10 +4,12 @@ export VISUAL="$EDITOR"
 export GIT_EDITOR="$EDITOR"
 export PAGER='less'
 export LANG="en_US.UTF-8"
-export ANDROID_HOME='/Users/steve/Library/Android/sdk'
+export ANDROID_HOME="$HOME/Library/Android/sdk"
 
 # path
-export PATH="/Users/steve/bin:$PATH:$ANDROID_HOME/platform-tools"
+export PATH="$HOME/bin:$PATH"
+export PATH="$PATH:$ANDROID_HOME/platform-tools"
+export PATH="$PATH:$HOME/go/bin"
 
 # install antigen
 source $HOME/dotfiles/antigen.zsh
