@@ -1,3 +1,3 @@
 function gbda --description 'deletes all merged branches'
-  git branch --no-color --merged | command grep -vE "^(\*|\s*(master|develop|dev)\s*$)" | command xargs -n 1 git branch -d
+  git branch --no-color --merged | grep -vE "^(\*|\s*(master|develop|dev)\s*\$)" | xargs -n 1 git branch -d
 end
