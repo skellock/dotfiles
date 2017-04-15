@@ -1,3 +1,4 @@
 function l --description 'Lists all files.'
-  ls -lah $argv
+  exa -hlamg --color-scale --group-directories-first --git $argv
 end
+
