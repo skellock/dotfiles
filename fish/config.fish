@@ -57,3 +57,18 @@ function fish_prompt
   set_color normal
 end
 
+# Git Abbreviations
+abbr -a ga git add
+abbr -a gb git branch
+abbr -a gbc git checkout -b
+abbr -a gcb git checkout -b
+abbr -a gcam git commit -a -m
+abbr -a gco git checkout
+abbr -a gd git diff
+abbr -a gpl git pull
+abbr -a gplr git pull --rebase
+abbr -a gup git pull --rebase
+abbr -a gp git push
+abbr -a gpoh git push -u origin HEAD
+abbr -a gpristine git reset --hard; git clean -dfx
+abbr -a gs git status -s
