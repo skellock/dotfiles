@@ -47,7 +47,7 @@ function fish_prompt
   set last_status $status
 
   set_color $fish_color_cwd
-  printf '\n%s' (prompt_pwd)
+  printf '%s' (prompt_pwd)
   set_color normal
 
   printf '%s' (__fish_git_prompt)
@@ -70,5 +70,5 @@ abbr -a gplr git pull --rebase
 abbr -a gup git pull --rebase
 abbr -a gp git push
 abbr -a gpoh git push -u origin HEAD
-abbr -a gpristine git reset --hard; git clean -dfx
+abbr -a gpristine "git reset --hard; git clean -dfx"
 abbr -a gs git status -s
