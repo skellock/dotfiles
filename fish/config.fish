@@ -58,17 +58,18 @@ function fish_prompt
 end
 
 # Git Abbreviations
-abbr -a ga git add
-abbr -a gb git branch
-abbr -a gbc git checkout -b
-abbr -a gcb git checkout -b
-abbr -a gcam git commit -a -m
-abbr -a gco git checkout
-abbr -a gd git diff
-abbr -a gpl git pull
-abbr -a gplr git pull --rebase
-abbr -a gup git pull --rebase
-abbr -a gp git push
-abbr -a gpoh git push -u origin HEAD
-abbr -a gpristine "git reset --hard; git clean -dfx"
-abbr -a gs git status -s
+abbr ga "git add"
+abbr gb "git branch"
+abbr gbc "git checkout -b"
+abbr gcb "git checkout -b"
+abbr gcam "git commit -a -m \"\""
+abbr grs "git reset"
+abbr gco "git checkout"
+abbr gd "git diff"
+abbr gpl "git pull"
+abbr gplr "git pull --rebase"
+abbr gup "git pull --rebase"
+abbr gp "git push"
+abbr gpoh "git push -u origin HEAD"
+abbr gpristine "git reset --hard; git clean -dfx"
+abbr gs "git status -s"
