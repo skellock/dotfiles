@@ -2,20 +2,47 @@
 
 # OVERVIEW
 #   Takes a screenshot of the android device/sim and
-#   copies it to the clipboard
+#   copies it to the clipboard or a file if the first
+#   parameter was a file name.
 
 # SOURCE:
 #   http://www.alecjacobson.com/weblog/?p=3816
 #   https://gist.github.com/mwender/49609a18be41b45b2ae4
 
-# temp file
-FILE=/tmp/android-screenshot.png
+CLIPBOARD=false
+FILENAME="$1"
+
+# check for perl
+if [ -z $(which perl) ]; then
+  echo SNAP! Sadly, perl is required.
+  exit 1
+fi
+
+# check for adb
+if [ -z $(which $ANDROID_HOME/platform-tools/adb) ]; then
+  echo SNAP! \$ANDROID_HOME environment variable is not set.
+  exit 1
+fi
+
+# no filename passed?
+if [ -z $FILENAME ]; then
+    # check for pbcopyimg
+  if [ -z $(which pbcopyimg) ]; then 
+    echo SNAP! pbcopyimg is required to copy to the clipboard.
+    exit 1
+  fi
+  FILENAME=/tmp/android-screenshot.png
+  CLIPBOARD=true
+fi
 
 # take the screen shot, converting it safely to an image
-adb shell screencap -p | perl -pe 's/\x0D\x0A/\x0A/g' > $FILE
+adb shell screencap -p | perl -pe 's/\x0D\x0A/\x0A/g' > $FILENAME
 
-# copy it to the clipboard
-pbcopyimg $FILE
+# was this clipboard bound?
+if $CLIPBOARD; then
+  # copy it to the clipboard
+  pbcopyimg $FILENAME
 
-# kill the temp file
-rm $FILE
+  # clean up
+  rm $FILENAME
+fi
