@@ -1,0 +1,21 @@
+#!/bin/bash
+
+# OVERVIEW
+#   Takes a screenshot of the android device/sim and
+#   copies it to the clipboard
+
+# SOURCE:
+#   http://www.alecjacobson.com/weblog/?p=3816
+#   https://gist.github.com/mwender/49609a18be41b45b2ae4
+
+# temp file
+FILE=/tmp/android-screenshot.png
+
+# take the screen shot, converting it safely to an image
+adb shell screencap -p | perl -pe 's/\x0D\x0A/\x0A/g' > $FILE
+
+# copy it to the clipboard
+pbcopyimg $FILE
+
+# kill the temp file
+rm $FILE
