@@ -35,6 +35,14 @@ abbr gpoh "git push -u origin HEAD"
 abbr gpristine "git reset --hard; git clean -dfx"
 abbr gs "git status -s"
 
+abbr mr "marathon run"
+
 # prompts
 source ~/.config/fish/functions/fish_prompt.fish
 source ~/.config/fish/functions/rprompt.fish
+
+# tabtab source for electron-forge package
+# uninstall by removing these lines or running `tabtab uninstall electron-forge`
+[ -f /usr/local/lib/node_modules/electron-forge/node_modules/tabtab/.completions/electron-forge.fish ]; and . /usr/local/lib/node_modules/electron-forge/node_modules/tabtab/.completions/electron-forge.fish
+
+if which swiftenv > /dev/null; status --is-interactive; and source (swiftenv init -|psub); end
