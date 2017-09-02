@@ -1,3 +1,3 @@
 function ns --description 'Runs the start script with npm.'
-  npm start $argv
+  npm -s start $argv
 end
