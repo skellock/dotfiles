@@ -37,6 +37,9 @@ abbr gs "git status -s"
 
 abbr mr "marathon run"
 
+abbr be "bundle exec"
+abbr bef "bundle exec fastlane"
+
 # android
 abbr ssa "adb shell screencap -p | perl -pe 's/\x0D\x0A/\x0A/g' > android-screenshot.png"
 
