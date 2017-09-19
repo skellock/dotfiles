@@ -7,6 +7,7 @@ set -x ANDROID_HOME $HOME/Library/Android/sdk
 
 # path
 set -x PATH \
+  $HOME/src/forks/flutter/bin \
   $HOME/bin \
   $PATH \
   $ANDROID_HOME/platform-tools \
