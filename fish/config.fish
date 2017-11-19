@@ -7,16 +7,27 @@ set -x ANDROID_HOME $HOME/Library/Android/sdk
 
 # path
 set -x PATH \
-  $HOME/src/forks/flutter/bin \
   $HOME/bin \
   $PATH \
   $ANDROID_HOME/platform-tools \
   $HOME/go/bin \
   /usr/local/sbin
 
-source /usr/local/share/chruby/chruby.fish
-chruby 2.4
-#source $HOME/.cargo/env
+# add flutter to the path
+if test -e "~/src/forks/flutter/bin"
+  set -x PATH \
+    $PATH \
+    $HOME/src/forks/flutter/bin
+end
+
+# ruby support
+if test -e "/usr/local/share/chruby/chruby.fish"
+  source /usr/local/share/chruby/chruby.fish
+  chruby 2.4
+end
+
+# rust support
+source $HOME/.cargo/env
 
 # Git Abbreviations
 abbr ga "git add"
@@ -36,9 +47,7 @@ abbr gp "git push"
 abbr gpoh "git push -u origin HEAD"
 abbr gpristine "git reset --hard; git clean -dfx"
 abbr gs "git status -s"
-
 abbr mr "marathon run"
-
 abbr be "bundle exec"
 abbr bef "bundle exec fastlane"
 
@@ -53,4 +62,11 @@ source ~/.config/fish/functions/rprompt.fish
 # uninstall by removing these lines or running `tabtab uninstall electron-forge`
 [ -f /usr/local/lib/node_modules/electron-forge/node_modules/tabtab/.completions/electron-forge.fish ]; and . /usr/local/lib/node_modules/electron-forge/node_modules/tabtab/.completions/electron-forge.fish
 
+# swift support
 if which swiftenv > /dev/null; status --is-interactive; and source (swiftenv init -|psub); end
+
+# secrets
+if test -e "~/.secrets"
+  source ~/.secrets
+end
+
