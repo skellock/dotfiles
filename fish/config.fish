@@ -54,6 +54,9 @@ abbr bef "bundle exec fastlane"
 # android
 abbr ssa "adb shell screencap -p | perl -pe 's/\x0D\x0A/\x0A/g' > android-screenshot.png"
 
+# just
+abbr j "just"
+
 # prompts
 source ~/.config/fish/functions/fish_prompt.fish
 source ~/.config/fish/functions/rprompt.fish
