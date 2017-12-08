@@ -1,0 +1,1 @@
+/Users/steve/.config/fisherman/z/functions/zclean.awk
