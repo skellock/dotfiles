@@ -56,14 +56,12 @@ abbr ssa "adb shell screencap -p | perl -pe 's/\x0D\x0A/\x0A/g' > android-screen
 
 # just
 abbr j "just"
+abbr js "just start"
+abbr jb "just build"
 
 # prompts
 source ~/.config/fish/functions/fish_prompt.fish
 source ~/.config/fish/functions/rprompt.fish
-
-# tabtab source for electron-forge package
-# uninstall by removing these lines or running `tabtab uninstall electron-forge`
-[ -f /usr/local/lib/node_modules/electron-forge/node_modules/tabtab/.completions/electron-forge.fish ]; and . /usr/local/lib/node_modules/electron-forge/node_modules/tabtab/.completions/electron-forge.fish
 
 # swift support
 if which swiftenv > /dev/null; status --is-interactive; and source (swiftenv init -|psub); end
