@@ -11,6 +11,7 @@ set -x PATH \
   $PATH \
   $ANDROID_HOME/platform-tools \
   $HOME/go/bin \
+  $HOME/.opam/system/bin \
   /usr/local/sbin
 
 # add flutter to the path
@@ -65,6 +66,16 @@ source ~/.config/fish/functions/rprompt.fish
 
 # swift support
 if which swiftenv > /dev/null; status --is-interactive; and source (swiftenv init -|psub); end
+
+# reason support
+# . /Users/steve/.opam/opam-init/init.fish > /dev/null 2> /dev/null or true
+# set -gx PATH "/Users/steve/.opam/system/bin" "$PATH";
+set -gx OCAML_TOPLEVEL_PATH "/Users/steve/.opam/system/lib/toplevel";
+set -gx PERL5LIB "/Users/steve/.opam/system/lib/perl5:$PERL5LIB";
+set -gx MANPATH "$MANPATH" "/Users/steve/.opam/system/man";
+set -gx OPAMUTF8MSGS "1";
+set -gx CAML_LD_LIBRARY_PATH "/Users/steve/.opam/system/lib/stublibs:/usr/local/lib/ocaml/stublibs";
+
 
 # secrets
 if test -e "~/.secrets"
