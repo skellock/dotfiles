@@ -4,6 +4,7 @@ set -x GIT_EDITOR $EDITOR
 set -x PAGER "less"
 set -x LANG "en_US.UTF-8"
 set -x ANDROID_HOME $HOME/Library/Android/sdk
+set -x FASTLANE_USER steve@kellock.ca
 
 # path
 set -x PATH \
@@ -48,17 +49,11 @@ abbr gp "git push"
 abbr gpoh "git push -u origin HEAD"
 abbr gpristine "git reset --hard; git clean -dfx"
 abbr gs "git status -s"
-abbr mr "marathon run"
 abbr be "bundle exec"
 abbr bef "bundle exec fastlane"
 
-# android
-abbr ssa "adb shell screencap -p | perl -pe 's/\x0D\x0A/\x0A/g' > android-screenshot.png"
-
 # just
 abbr j "just"
-abbr js "just start"
-abbr jb "just build"
 
 # prompts
 source ~/.config/fish/functions/fish_prompt.fish
@@ -75,7 +70,6 @@ set -gx PERL5LIB "/Users/steve/.opam/system/lib/perl5:$PERL5LIB";
 set -gx MANPATH "$MANPATH" "/Users/steve/.opam/system/man";
 set -gx OPAMUTF8MSGS "1";
 set -gx CAML_LD_LIBRARY_PATH "/Users/steve/.opam/system/lib/stublibs:/usr/local/lib/ocaml/stublibs";
-
 
 # secrets
 if test -e "~/.secrets"
