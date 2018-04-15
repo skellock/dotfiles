@@ -71,6 +71,10 @@ set -gx MANPATH "$MANPATH" "/Users/steve/.opam/system/man";
 set -gx OPAMUTF8MSGS "1";
 set -gx CAML_LD_LIBRARY_PATH "/Users/steve/.opam/system/lib/stublibs:/usr/local/lib/ocaml/stublibs";
 
+# crystal support
+#export PKG_CONFIG_PATH=/usr/local/opt/openssl/lib/pkgconfig
+set -U -x PKG_CONFIG_PATH /usr/local/opt/openssl/lib/pkgconfig
+
 # secrets
 if test -e "~/.secrets"
   source ~/.secrets
