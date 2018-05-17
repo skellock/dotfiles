@@ -11,7 +11,7 @@ set __fish_git_prompt_showstashstate 'no'
 set __fish_git_prompt_showuntrackedfiles 'yes'
 set __fish_git_prompt_showupstream 'yes'
 # set __fish_git_prompt_show_informative_status 'yes'
-set __fish_git_prompt_color_branch -d black
+set __fish_git_prompt_color_branch -d yellow
 set __fish_git_prompt_color_upstream_ahead green
 set __fish_git_prompt_color_upstream_behind red
 
@@ -35,7 +35,7 @@ function fish_prompt
   set_color normal
 
   printf '%s' (__fish_git_prompt)
-  set_color -o black
+  set_color -o yellow
   printf '\n❯ '
 
   set_color normal
