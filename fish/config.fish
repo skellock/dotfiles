@@ -8,6 +8,7 @@ set -x FASTLANE_USER steve@kellock.ca
 
 # path
 set -x PATH \
+  $HOME/.nimble/bin \
   $HOME/bin \
   $PATH \
   $ANDROID_HOME/platform-tools \
@@ -79,4 +80,3 @@ set -U -x PKG_CONFIG_PATH /usr/local/opt/openssl/lib/pkgconfig
 if test -e "~/.secrets"
   source ~/.secrets
 end
-
