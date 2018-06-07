@@ -8,6 +8,7 @@ set -x FASTLANE_USER steve@kellock.ca
 
 # path
 set -x PATH \
+  ./bin \
   $HOME/.nimble/bin \
   $HOME/bin \
   $PATH \
