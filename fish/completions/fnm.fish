@@ -1,0 +1,1 @@
+/home/steve/.config/fisherman/fnm/completions/fnm.fish
