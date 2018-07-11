@@ -12,10 +12,19 @@ set -x PATH \
   $HOME/.nimble/bin \
   $HOME/bin \
   $PATH \
-  $ANDROID_HOME/platform-tools \
-  $HOME/go/bin \
-  $HOME/.opam/system/bin \
   /usr/local/sbin
+
+if test -e $ANDROID_HOME/platform-tools
+  set -x PATH $PATH $ANDROID_HOME/platform-tools
+end
+
+if test -e $HOME/go/bin
+  set -x PATH $PATH $HOME/go/bin
+end
+
+if test -e $HOME/.opam/system/bin
+  set -x PATH $PATH $HOME/.opam/system/bin
+end
 
 # add flutter to the path
 if test -e "~/src/forks/flutter/bin"
@@ -31,7 +40,9 @@ if test -e "/usr/local/share/chruby/chruby.fish"
 end
 
 # rust support
-source $HOME/.cargo/env
+if test -e $HOME/.cargo/env
+  source $HOME/.cargo/env
+end
 
 # Git Abbreviations
 abbr ga "git add"
