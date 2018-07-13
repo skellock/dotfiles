@@ -85,10 +85,11 @@ set -gx OPAMUTF8MSGS "1";
 set -gx CAML_LD_LIBRARY_PATH "/Users/steve/.opam/system/lib/stublibs:/usr/local/lib/ocaml/stublibs";
 
 # crystal support
-#export PKG_CONFIG_PATH=/usr/local/opt/openssl/lib/pkgconfig
-set -U -x PKG_CONFIG_PATH /usr/local/opt/openssl/lib/pkgconfig
+if test -e "/usr/local/opt/openssl/lib/pkgconfig"
+  set -U -x PKG_CONFIG_PATH /usr/local/opt/openssl/lib/pkgconfig
+end
 
 # secrets
-if test -e "~/.secrets"
-  source ~/.secrets
+if test -e "$HOME/.secrets"
+  source $HOME/.secrets
 end
