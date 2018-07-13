@@ -93,3 +93,10 @@ end
 if test -e "$HOME/.secrets"
   source $HOME/.secrets
 end
+
+
+# fzf
+if test -e "$HOME/.fzf/shell/key-bindings.fish"
+  source $HOME/.fzf/shell/key-bindings.fish
+end
+
