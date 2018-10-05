@@ -1,4 +1,4 @@
-set -x EDITOR "nvim"
+set -x EDITOR vim
 set -x VISUAL $EDITOR
 set -x GIT_EDITOR $EDITOR
 set -x PAGER "less"
