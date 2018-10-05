@@ -2,6 +2,7 @@ set line-graphics = utf-8
 
 set main-view-date = relative-compact
 set main-view-author = email-user
+set main-view-id-display = yes
 
 set blame-view-date = relative-compact
 set blame-view-author = email-user
