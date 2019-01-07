@@ -36,7 +36,7 @@ end
 # ruby support
 if test -e "/usr/local/share/chruby/chruby.fish"
   source /usr/local/share/chruby/chruby.fish
-  chruby 2.4
+  chruby 2.6
 end
 
 # rust support
