@@ -5,6 +5,7 @@ set -x PAGER "less"
 set -x LANG "en_US.UTF-8"
 set -x ANDROID_HOME $HOME/Library/Android/sdk
 set -x FASTLANE_USER steve@kellock.ca
+set -x FZF_DEFAULT_COMMAND "fd --type f --follow --hidden --exclude .git"
 
 # path
 set -x PATH \
