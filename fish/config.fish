@@ -3,7 +3,6 @@ set -x VISUAL $EDITOR
 set -x GIT_EDITOR $EDITOR
 set -x PAGER "less"
 set -x LANG "en_US.UTF-8"
-set -x ANDROID_HOME $HOME/Library/Android/sdk
 set -x FASTLANE_USER steve@kellock.ca
 set -x FZF_DEFAULT_COMMAND "fd --type f --follow --hidden --exclude .git --exclude node_modules"
 
@@ -15,6 +14,8 @@ set -x PATH \
   $PATH \
   /usr/local/sbin
 
+# android 
+set -x ANDROID_HOME $HOME/Library/Android/sdk
 if test -e $ANDROID_HOME/platform-tools
   set -x PATH $PATH $ANDROID_HOME/platform-tools
 end
