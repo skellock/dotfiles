@@ -1,0 +1,28 @@
+name: steve
+root: ~/
+startup_window: order
+startup_pane: 2
+windows:
+  - system:
+      layout: even-horizontal
+      panes:
+        - neofetch
+        - brew outdated
+        - htop
+  - dotfiles:
+      root: ~/dotfiles
+      layout: even-horizontal
+      panes:
+        - lg
+        - vim fish/config.fish
+  - order:
+      layout: even-horizontal
+      root: ~/src/active/order
+      panes:
+        - lg
+        - vim inbox.adoc
+  - social:
+      layout: even-horizontal
+      panes:
+        - weechat
+        -
