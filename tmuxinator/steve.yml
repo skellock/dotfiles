@@ -1,20 +1,20 @@
 name: steve
 root: ~/
-startup_window: order
+startup_window: system
 startup_pane: 2
 windows:
   - system:
       layout: even-horizontal
       panes:
         - neofetch
-        - brew outdated
+        - 
         - htop
   - dotfiles:
       root: ~/dotfiles
       layout: even-horizontal
       panes:
         - lg
-        - vim fish/config.fish
+        - vim fish/config.fish tmuxinator/steve.yml tmux.conf
   - order:
       layout: even-horizontal
       root: ~/src/active/order
