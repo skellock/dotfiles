@@ -69,25 +69,6 @@ source ~/.config/fish/functions/rprompt.fish
 # swift support
 if which swiftenv > /dev/null 2> /dev/null; status --is-interactive; and source (swiftenv init -|psub); end
 
-# ocaml
-#if test -e $HOME/.opam/system/bin
-#  set -x PATH $PATH $HOME/.opam/system/bin
-#end
-
-# reason support
-# . /Users/steve/.opam/opam-init/init.fish > /dev/null 2> /dev/null or true
-# set -gx PATH "/Users/steve/.opam/system/bin" "$PATH";
-# set -gx OCAML_TOPLEVEL_PATH "/Users/steve/.opam/system/lib/toplevel";
-# set -gx PERL5LIB "/Users/steve/.opam/system/lib/perl5:$PERL5LIB";
-# set -gx MANPATH "$MANPATH" "/Users/steve/.opam/system/man";
-# set -gx OPAMUTF8MSGS "1";
-# set -gx CAML_LD_LIBRARY_PATH "/Users/steve/.opam/system/lib/stublibs:/usr/local/lib/ocaml/stublibs";
-
-# crystal support
-#if test -e "/usr/local/opt/openssl/lib/pkgconfig"
-#  set -U -x PKG_CONFIG_PATH /usr/local/opt/openssl/lib/pkgconfig
-#end
-
 # secrets
 if test -e "$HOME/.secrets"
   source $HOME/.secrets
