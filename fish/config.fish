@@ -25,14 +25,12 @@ if test -e $HOME/go/bin
 end
 
 # add flutter to the path
-if test -e "~/src/forks/flutter/bin"
-  set -x PATH \
-    $PATH \
-    $HOME/src/forks/flutter/bin
+if test -e $HOME/src/forks/flutter/bin
+  set -x PATH $PATH $HOME/src/forks/flutter/bin
 end
 
 # ruby support
-if test -e "/usr/local/share/chruby/chruby.fish"
+if test -e /usr/local/share/chruby/chruby.fish
   source /usr/local/share/chruby/chruby.fish
   chruby 2.6
 end
