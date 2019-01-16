@@ -59,8 +59,10 @@ abbr be "bundle exec"
 abbr bef "bundle exec fastlane"
 abbr fs "forego start"
 
-# just
 abbr j "just"
+
+abbr tm "tmuxinator"
+abbr tms "tmuxinator start"
 
 # prompts
 source ~/.config/fish/functions/fish_prompt.fish
