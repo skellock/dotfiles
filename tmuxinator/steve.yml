@@ -6,8 +6,8 @@ windows:
   - system:
       layout: even-horizontal
       panes:
+        - nnn
         - neofetch
-        - 
         - htop
   - dotfiles:
       root: ~/dotfiles
