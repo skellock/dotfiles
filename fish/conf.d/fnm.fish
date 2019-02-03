@@ -1,1 +1,0 @@
-/home/steve/.config/fisherman/fnm/conf.d/fnm.fish
