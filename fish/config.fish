@@ -55,6 +55,16 @@ abbr gpoh "git push -u origin HEAD"
 abbr gpristine "git reset --hard; git clean -dfx"
 abbr gs "git status -s"
 
+# Git flow
+abbr gffs "git flow feature start"
+abbr gfff "git flow feature finish"
+abbr gfbs "git flow bugfix start"
+abbr gfbf "git flow bugfix finish"
+abbr gfrs "git flow release start"
+abbr gfrf "git flow release finish"
+abbr gfl "git flow log"
+abbr gf "git flow"
+
 abbr be "bundle exec"
 abbr bef "bundle exec fastlane"
 abbr fs "forego start"
