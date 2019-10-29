@@ -76,7 +76,7 @@ abbr tms "tmuxinator start"
 
 # prompts
 source ~/.config/fish/functions/fish_prompt.fish
-#source ~/.config/fish/functions/rprompt.fish
+source ~/.config/fish/functions/rprompt.fish
 
 # swift support
 if which swiftenv > /dev/null 2> /dev/null; status --is-interactive; and source (swiftenv init -|psub); end
