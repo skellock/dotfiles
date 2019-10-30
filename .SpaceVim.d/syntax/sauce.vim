@@ -1,11 +1,12 @@
 let b:current_syntax = "sauce" 
 
-syn keyword sauceTopLevelKeyword STRUCT PROP struct prop
 syn match   sauceComment "#.*$"
-syn keyword sauceKeyword TYPE type KIND kind FLAGS flags TAGS tags
+syn keyword sauceInstruction struct prop type kind flags tags values
+syn keyword sauceStructKind api record enum state store repo service
+syn keyword saucePropType string bool date int float double decimal money timezone atom tuple union intersection function
 
-
-hi def link sauceTopLevelKeyword Function
 hi def link sauceComment Comment
-hi def link sauceKeyword Keyword
+hi def link sauceInstruction Function
+hi def link sauceStructKind Constant
+hi def link saucePropType Type
 
