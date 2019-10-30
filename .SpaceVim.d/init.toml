@@ -43,16 +43,11 @@
 #[[layers]]
 #  name = "ctrlp"
 
-#[[layers]]
-#  name = "lang#nim"
-
 [[custom_plugins]]
   name = "dag/vim-fish"
 
 [[custom_plugins]]
   name = "alaviss/nim.nvim"
-
-# [[custom_plugins]]
 #  name = "zah/nim.vim"
 
 [[custom_plugins]]
