@@ -5,7 +5,7 @@ syn keyword sauceInstruction struct prop type kind flags tags values value defau
 syn match   sauceEndpointPath /\v[a-zA-Z0-9:_/]*/ contained
 syn keyword saucePathKeyword path contained
 syn region  sauceEndpointPathRegion start=/\v^\s*path\s/ end=/\v$/ contains=sauceEndpointPath,saucePathKeyword keepend transparent
-syn keyword sauceApiInstruction endpoint input path method qsv data response output from as
+syn keyword sauceApiInstruction api endpoint param path get post put patch delete qsv formdata response returns from as
 syn keyword sauceStructKind api record enum state store repo service
 syn keyword saucePropType string bool date int float double decimal money timezone atom tuple union intersection function
 syn match   sauceQuestion "?"
