@@ -40,6 +40,18 @@
 [[layers]]
   name = "colorscheme"
 
+[[layers]]
+  name = "lang#kotlin"
+
+[[layers]]
+  name = "lang#swift"
+
+[[layers]]
+  name = "git"
+
+[[layers]]
+  name = "github"
+
 #[[layers]]
 #  name = "ctrlp"
 
