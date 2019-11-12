@@ -53,3 +53,5 @@
 [[custom_plugins]]
   name = "vmchale/just-vim"
 
+[[custom_plugins]]
+  name = "djoshea/vim-autoread"
