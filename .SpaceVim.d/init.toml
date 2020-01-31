@@ -67,3 +67,6 @@
 
 [[custom_plugins]]
   name = "djoshea/vim-autoread"
+
+[[custom_plugins]]
+  name = "habamax/vim-asciidoctor"
