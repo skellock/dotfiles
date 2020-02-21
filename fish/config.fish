@@ -94,4 +94,6 @@ if test -e "$HOME/.fzf/shell/key-bindings.fish"
   source $HOME/.fzf/shell/key-bindings.fish
 end
 
-source /usr/local/opt/asdf/asdf.fish
+if test -e "/usr/local/opt/asdf/asdf.fish"
+  source /usr/local/opt/asdf/asdf.fish
+end
