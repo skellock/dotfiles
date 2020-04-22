@@ -70,3 +70,7 @@
 
 [[custom_plugins]]
   name = "habamax/vim-asciidoctor"
+
+[[custom_plugins]]
+  name = "pechorin/any-jump.vim"
+
