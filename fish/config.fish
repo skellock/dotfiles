@@ -67,6 +67,7 @@ abbr gfl "git flow log"
 abbr gf "git flow"
 
 abbr be "bundle exec"
+abbr ber "bundle exec rails"
 abbr bef "bundle exec fastlane"
 abbr fs "forego start"
 
