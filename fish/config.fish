@@ -15,7 +15,7 @@ set -x PATH \
   $PATH \
   /usr/local/sbin
 
-# android 
+# android
 set -x ANDROID_HOME $HOME/Library/Android/sdk
 if test -e $ANDROID_HOME/platform-tools
   set -x PATH $PATH $ANDROID_HOME/platform-tools
@@ -71,9 +71,6 @@ abbr bef "bundle exec fastlane"
 abbr fs "forego start"
 
 abbr j "just"
-
-abbr tm "tmuxinator"
-abbr tms "tmuxinator start"
 
 # prompts
 source ~/.config/fish/functions/fish_prompt.fish
