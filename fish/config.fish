@@ -5,6 +5,7 @@ set -x PAGER "less"
 set -x LANG "en_US.UTF-8"
 set -x FASTLANE_USER steve@kellock.ca
 set -x FZF_DEFAULT_COMMAND "fd --type f --follow --hidden --exclude .git --exclude node_modules"
+set -x RUBYOPT "-W:no-deprecated -W:no-experimental"
 
 # path
 set -x PATH \
