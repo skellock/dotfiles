@@ -1,7 +1,7 @@
 let b:current_syntax = "sauce" 
 
 syn match   sauceComment "#.*$"
-syn keyword sauceInstruction struct prop type kind flags tags values value default
+syn keyword sauceInstruction struct prop type kind flags tags values value default case
 syn match   sauceEndpointPath /\v[a-zA-Z0-9:_/]*/ contained
 syn keyword saucePathKeyword path contained
 syn region  sauceEndpointPathRegion start=/\v^\s*path\s/ end=/\v$/ contains=sauceEndpointPath,saucePathKeyword keepend transparent
