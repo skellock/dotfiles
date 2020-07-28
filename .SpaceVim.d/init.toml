@@ -47,6 +47,9 @@
   name = "lang#swift"
 
 [[layers]]
+  name = "lang#extra"
+
+[[layers]]
   name = "git"
 
 [[layers]]
