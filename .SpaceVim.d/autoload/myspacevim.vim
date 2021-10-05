@@ -15,6 +15,9 @@ function! myspacevim#after()
   " kotlin
   au FileType kotlin setlocal tabstop=4 shiftwidth=4 softtabstop=0
 
+  " swift
+  au FileType swift setlocal tabstop=4 shiftwidth=4 softtabstop=0
+
   " sauce-specific
   au BufRead,BufNewFile *.sauce set filetype=sauce
   au FileType sauce setlocal tabstop=4 shiftwidth=4 softtabstop=0
