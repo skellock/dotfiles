@@ -78,7 +78,7 @@ source ~/.config/fish/functions/fish_prompt.fish
 source ~/.config/fish/functions/rprompt.fish
 
 # swift support
-if which swiftenv > /dev/null 2> /dev/null; status --is-interactive; and source (swiftenv init -|psub); end
+# if which swiftenv > /dev/null 2> /dev/null; status --is-interactive; and source (swiftenv init -|psub); end
 
 # starship prompt support
 if which starship > /dev/null 2> /dev/null; status --is-interactive; and eval (starship init fish); end
